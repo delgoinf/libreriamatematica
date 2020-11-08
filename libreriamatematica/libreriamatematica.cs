@@ -84,7 +84,7 @@ namespace libreriamatematica
             int iverso = a * -1;
             return iverso;
         }
-        public static int pari(int a, int v)
+        public static int pari(int a, int v) 
         {
             return (a % 2);
         }
