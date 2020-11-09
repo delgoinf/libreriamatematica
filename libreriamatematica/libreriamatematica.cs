@@ -4,103 +4,102 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Text;
 
-namespace libreriamatematica
+namespace matematicaes
 {
     class libreriamatematica
     {
-        public static int somma(int a,int b)
+        public static int Somma(int a,int b)
         {
             int somma = a + b;
             return somma;
         }
-        public static double sommad(double a , double b)
+        public static double Sommad(double a , double b)
         {
             double somma = a + b;
             return somma;
         }
-        public static double sottrazione(double a,double b)
+        public static double Sottrazione(double a,double b)
         {
             double sottrazione = a - b;
             return sottrazione;
         }
-        public static double moltiplicazione(double a,double b)
+        public static double Moltiplicazione(double a,double b)
         {
             double moltiplicazione = a * b;
             return moltiplicazione;
         }
-        public static double divisione(double a,double b)
+        public static double Divisione(double a,double b)
         {
             double divisione = a / b;
             return divisione;
         }
-        public static long potenza(int a, int b)
+        public static long Potenza(int a, int b)
         {
-            long potenza = a ^ a;
+            int i;
+            long potenza = 1;
+            for (i = 0; i < b; i++)
+            {
+                potenza *= a;
+            }
             return potenza;
         }
-        public static int minore(int a, int b, int c)
+        public static int Minore(int a, int b, int c)
         {
            int minore= Math.Min(a, b);Math.Min(minore, c);
             return minore;
         }
-
-        internal static int inverso(int v1, int v2, int v3)
+        public static long CalcoloFattoriale(int a)
         {
-            throw new NotImplementedException();
+            long fattoriale = 1;
+            for(int i = 2; i <= a; i++)
+            {
+                fattoriale = fattoriale * i;
+            }
+            return fattoriale;
         }
 
-        internal static int pari(int v1, int v2, int v3)
+        internal static double Inverso(double a)
         {
-            throw new NotImplementedException();
+            double inverso = a * -1;
+            return inverso;
         }
 
-        internal static int dispari(int v1, int v2, int v3)
+        internal static bool Pari(int a)
         {
-            throw new NotImplementedException();
+            return a % 2 == 0;
         }
 
-        internal static int positivo(int v1, int v2, int v3)
+        internal static bool Dispari(int a)
         {
-            throw new NotImplementedException();
+            return !Pari(a);
         }
 
-        internal static int negativo(int v1, int v2, int v3)
+        internal static bool Negativo(int a)
         {
-            throw new NotImplementedException();
+            return a < 0;
         }
 
-        internal static int intero(double v1, int v2, double v3)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static int maggiore(int a, int b, int c)
+        public static int Maggiore(int a, int b, int c)
         {
             int maggiore = Math.Max(a, b);Math.Max(maggiore, c);
             return maggiore;
         }
-        public static int inverso(int a)
+        public static int Inverso(int a)
         {
             int iverso = a * -1;
             return iverso;
         }
-        public static int pari(int a, int v) 
+        public static int Pari(int a, int v) 
         {
             return (a % 2);
         }
-        public static int dispari (int a, int v)
-        {
-            return (a % 3);
-        }
-        public static bool positivo (int a)
+
+        public static bool Positivo (int a)
         {
             return  a > 0;
         }
-        public static bool negativo (int a)
-        {
-            return a < 0;
-        }
-        public static bool intero(double a)
+ 
+        public static bool Intero(double a)
         {
             return a == (int) a;
         }

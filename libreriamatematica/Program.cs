@@ -1,40 +1,39 @@
 ﻿using System;
 
-namespace libreriamatematica
+namespace matematicaes
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int somma = libreriamatematica.somma(4,5);
-            Console.WriteLine($"la somma {somma}");
-            double sommad = libreriamatematica.sommad(4.5, 5.4);
-            Console.WriteLine($"la somam {sommad}");
-            double sottrazione = libreriamatematica.sottrazione(4, 5);
-            Console.WriteLine($"la sottrazione {sottrazione}");
-            long potenza = libreriamatematica.potenza(3, 3);
-            Console.WriteLine($"la potenza {potenza}");
-            double divisione = libreriamatematica.divisione(5, 4);
-            Console.WriteLine($"la divisione {divisione}");
-            double moltiplicazione = libreriamatematica.moltiplicazione(4, 5);
-            Console.WriteLine($"la moltiplicazione {moltiplicazione}");
-            int minore = libreriamatematica.minore(4, 6, 8);
-            Console.WriteLine($"il minore {minore}");
-            int maggiore = libreriamatematica.maggiore(4, 6, 8);
-            Console.WriteLine($"il maggiore {maggiore}");
-            int inverso = libreriamatematica.inverso(4, 5, 7);
-            Console.WriteLine($"il numero inverso {inverso}");
-            int pari = libreriamatematica.pari(6, 5, 2);
-            Console.WriteLine($"il numero pari {pari}");
-            int dispari = libreriamatematica.dispari(5, 8, 6);
-            Console.WriteLine($"il numero dispari {dispari}");
-            int positivo = libreriamatematica.positivo(6, 4, -7);
-            Console.WriteLine($"il numero positivo {positivo}");
-            int negativo = libreriamatematica.negativo(7, -9, -7);
-            Console.WriteLine($"il numero è negativo {negativo}");
-            int intero = libreriamatematica.intero(4.4, 5, 8.6);
-            Console.WriteLine($"il numero intero {intero}");
-
+            int somma = libreriamatematica.Somma(5, 4);
+            Console.WriteLine($"la somma intera è: {somma}");
+            double sommaDouble = libreriamatematica.Sommad(7.0, 4.0);
+            Console.WriteLine($"la somma decimale è: {sommaDouble}");
+            double moltiplicazione = libreriamatematica.Moltiplicazione(8, 4);
+            Console.WriteLine($"la moltiplicazione è: {moltiplicazione}");
+            double divisione = libreriamatematica.Divisione(3, 6);
+            Console.WriteLine($"la divisione è: {divisione}");
+            long potenza = libreriamatematica.Potenza(4, 4);
+            Console.WriteLine($"la potenza è: {potenza}");
+            long molt = libreriamatematica.CalcoloFattoriale(10);
+            Console.WriteLine($"il fattoriale è {molt}");
+            int min = libreriamatematica.Minore(1, 2, 3);
+            Console.WriteLine($"il minimo è {min}");
+            int max = libreriamatematica.Maggiore(5, 6, 7);
+            Console.WriteLine($"il massimo è {max}");
+            double inverso = libreriamatematica.Inverso(3);
+            Console.WriteLine($"il numero inverso è {inverso}");
+            bool pari = libreriamatematica.Pari(8);
+            Console.WriteLine($"il numero è pari {pari}");
+            bool dispari = libreriamatematica.Dispari(3);
+            Console.WriteLine($"il numero è dispari{dispari}");
+            bool positivo = libreriamatematica.Positivo(8);
+            Console.WriteLine($"il numero è positivo: {positivo}");
+            bool negativo = libreriamatematica.Negativo(1);
+            Console.WriteLine($"il numero è positivo: {negativo}");
+            bool intero = libreriamatematica.Intero(5);
+            Console.WriteLine($"il numero è intero: {intero}");
 
 
         }
